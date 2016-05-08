@@ -1,6 +1,13 @@
 #! /usr/local/bin/fish
+#
+# git repo colortagger for osx
+# 
+# A small tool to scan home dir for dirs containing git repos, then make sure
+# they are tagged with the 'red' tag in Finder on OSX.
+
 
 set red 0000000000000000000C00000000000000000000000000000000000000000000
+
 set repos (find ~/ -name ".git" | sed 's/.git$//')
 
 for repo in $repos
